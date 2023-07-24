@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agendamento</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="agendamento.css">
+  </head>
+  
+  <body class="colors">
+    <header>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="#">Consultar Agendametos</a>
+      </nav>
+    </header>
+    <div class="container_title">
+      <h1>Central de Agendamento</h1>
+    </div>
+    <div class="container_form colors">
+          <h2>Preencher todos os campos</h2>
+          <form action="">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required />
+            <label for="sobrenome">Sobrenome</label>
+            <input type="text" id="sobrenome" name="sobrenome" required />
+            <label for="email">E-mail</label>
+            <input type="text" id="email" name="email" required />
+            <label for="tel">Telefone</label>
+            <input type="text" id="tel" name="tel" required /><br><br>
+            <label for="date">Data e Hora</label>
+            <input type="datetime-local" id="date" name="date" style="cursor: pointer"  required/>
+            <label for="especialista">Selecione o Especialista</label>
+            <select name="especialista" id="especialista" required>
+              <option value="Pediatra">Pediatra</option>
+              <option value="Clinico">Clínico Geral</option>
+              <option value="Cardiologista">Cardiologista</option>
+              <option value="Neurologista">Neurologista</option>
+            </select>
+              <label for="particular">Particular</label>
+              <input type="radio" id="particular" name="plano" value="particular" >
+              <label for="convenio">Convenio</label>
+              <input type="radio" id="convenio" name="plano" value="convenio" >
+          </form>
+        </div>
+        <div class="container_button">
+          <button class="colors" id="btnConf">Agendar</button>
+        </div>
+        <div class="container_preview"></div>
+        <script type="text/javascript" src="./agendamento.js" defer=""></script>
+      </body>
+      </html>
+      

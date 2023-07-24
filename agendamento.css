@@ -1,0 +1,60 @@
+/*estilos da página de  agendamentos*/
+
+.container_title h1 {
+  display: flex;
+  justify-content: center;
+  margin: 24px;
+  padding: 24px;
+}
+
+.container_form {
+  background: var(--color-container-teste02);
+  text-align: center;
+  margin: 50px;
+  padding: 42px;
+  font-size: 24px;
+}
+.container_form h2 {
+  position: relative;
+  bottom: 30px;
+}
+
+.container_button {
+  display: flex;
+  justify-content: center;
+}
+
+#btnConf {
+  background: var(--color-container-colorButton);
+  width: 150px;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+#btnConf:hover {
+  background: var(--color-container-hover);
+}
+
+.render {
+  text-align: center;
+  background: var(--color-container-teste02);
+  margin: 50px;
+  padding: 15px;
+  font-size: 20px;
+  transition: 0.1s;
+}
+.render button {
+  background: var(--color-container-colorButton);
+  border: none;
+  width: 12rem;
+  padding: 5px;
+  margin: 12px;
+  border-radius: 4px;
+  transition: 0.1s;
+}
+.render button:hover {
+  background: var(--color-container-hover);
+}
+/*fim estilização da página de agendamento*/

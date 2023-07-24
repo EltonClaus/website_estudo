@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--color-container-teste03);
+}
+body img {
+  display: flex;
+  opacity: 0.4;
+  width: 100%;
+  position: absolute;
+  bottom: 12px;
+}
+header {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 24px;
+  padding: 24px;
+}
+
+section h2 {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 24px;
+  padding: 24px;
+}
+nav {
+  background: var(--color-container-text);
+  display: flex;
+  height: 50px;
+  justify-content: space-around;
+}
+nav a {
+  text-decoration: none;
+  position: relative;
+  color: var(--color-container-teste04);
+  top: 12px;
+  font-size: 20px;
+}
+nav a:hover {
+  color: var(--color-container-teste03);
+}
+#especialidades div {
+  display: flex;
+  justify-content: space-around;
+  z-index: 1;
+}
+#especialidades div p {
+  font-size: 20px;
+}
+#especialidades div p {
+  z-index: 1;
+}
+
+#especialidades .especialidades {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 20%;
+  padding: 16px;
+  margin: 24px;
+  height: 280px;
+}
+
+/*Dropdow menu index*/
+.dropbtn {
+  padding: 16px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: var(--color-container-teste04);
+  min-width: 120px;
+  z-index: 2;
+  text-align: center;
+}
+.dropdown-content a {
+  color: var(--color-container-text);
+  padding: 30px 10px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+  position: absolute;
+  top: 3.1rem;
+}
+/*fim dropdow menu index*/
+
+/* inicio do footer index*/
+
+.footer_info {
+  background: var(--color-container-text);
+  color: var(--color-container-teste04);
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 50px;
+  position: absolute;
+  top: 47vw;
+}
+.footer_info .telefones {
+  position: relative;
+  right: 14rem;
+  font-size: 20px;
+  top: 0.2rem;
+}
+.footer_info .whatsapp {
+  position: relative;
+  right: 10.2rem;
+  font-size: 20px;
+  padding: 25px;
+  top: 0.4rem;
+}
+.footer_info .endereco {
+  position: relative;
+  font-size: 20px;
+  left: 4rem;
+  padding: 15px;
+  top: 0.3rem;
+}
+.footer_info .funcionamento {
+  position: relative;
+  font-size: 20px;
+  left: 25rem;
+  bottom: 15.2rem;
+}
+.footer_info .sociais {
+  background: var(--color-container-text);
+}
+.footer_info .sociais .insta {
+  position: relative;
+  left: 55px;
+  top: 3rem;
+}
+.footer_info .sociais .face {
+  position: relative;
+  right: 55px;
+  top: 2.5rem;
+}
+/*final footer do index*/
+
+/*paletta de cores*/
+.colors {
+  --color-container-text: #0e0e0e;
+  --color-container-teste01: #454842;
+  --color-container-teste02: #656970;
+  --color-container-teste03: #bfbfbd;
+  --color-container-teste04: #f9f9f9;
+  --color-container-button: #6da9c080;
+  --color-container-colorButton: #38eef4;
+  --color-container-hover: #bef4f6c2;
+}
