@@ -1,14 +1,31 @@
+
+     // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
+      import {
+        getFirestore,
+        doc,
+        getDoc,
+        getDocs,
+        collection,
+        addDoc,
+        updateDoc,
+        deleteDoc,
+      } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-firestore.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
 const agendamento = {
-  initi() {
+  init() {
+    // this.firebase();
     let nome = document.querySelector("#nome");
     let sobrenome = document.querySelector("#sobrenome");
     let email = document.querySelector("#email");
     let tel = document.querySelector("#tel");
     let date = document.querySelector("#date");
-    let specialist = document.querySelector("#especialista");
-    this.populaTabela(nome, sobrenome, email, tel, date, specialist);
+    let especialista = document.querySelector("#especialista");
+    this.populaTabela(nome, sobrenome, email, tel, date, especialista);
   },
-  populaTabela(nome, sobrenome, email, tel, date, specialist) {
+  populaTabela(nome, sobrenome, email, tel, date, especialista) {
     let preview = document.querySelector(".container_preview");
     document.querySelector("#btnConf").addEventListener("click", () => {
       let radioButtons = document.querySelectorAll('input[name="plano"]');
@@ -18,7 +35,7 @@ const agendamento = {
           selected = radioButton.value;
           break;
         }
-      };
+      }
 
       preview.innerHTML += `
       <div class="render">
@@ -27,12 +44,47 @@ const agendamento = {
         <h4>E-mail: ${email.value}</h4>
         <h4>Telefone: ${tel.value}</h4>
         <h4>Data e Hora: ${date.value}</h4>
-        <h4>Especialista: ${specialist.value}</h4>
-        <h4>${selected}</h4>
-        <button>Confirmar</button>
+        <h4>Especialista: ${especialista.value}</h4>
+        <h4>Plano: ${selected}</h4>
+        <button id="btnConfirmar">Confirmar</button>
       </div>  
       `;
+
+         // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyDlm9jZIEWhUfw4qSKyO_NPfP35ouAuZbE",
+        authDomain: "websitestudy.firebaseapp.com",
+        projectId: "websitestudy",
+        storageBucket: "websitestudy.appspot.com",
+        messagingSenderId: "152102380529",
+        appId: "1:152102380529:web:84a05058be863808eb5a50",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+
+      // // Initialize Cloud Firestore and get a reference to the service
+      const db = getFirestore(app);
+      console.log("estou aqui");
+
+      document.querySelector("#btnConfirmar").addEventListener('click', () => {
+        addDoc(collection(db, "agendamentos"), {
+         nome: nome.value,
+         sobrenome: sobrenome.value,
+         email: email.value,
+         tel: tel.value,
+         dateTime: date.value,
+         especialista: especialista.value,
+         plano: selected
+       });
+       alert("agendamento add")
+      })
     });
-  },
+  }, 
 };
-agendamento.initi();
+agendamento.init();
+
+
+
+    
+
