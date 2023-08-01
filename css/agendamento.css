@@ -38,7 +38,7 @@ nav a {
 }
 nav a:hover {
   color: var(--color-container-teste03);
-}""
+}
 .container_title h1 {
   display: flex;
   justify-content: center;
