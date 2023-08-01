@@ -1,0 +1,115 @@
+/*estilos da página de  agendamentos*/
+body {
+  background: var(--color-container-teste03);
+}
+body img {
+  display: flex;
+  opacity: 0.4;
+  width: 100%;
+  position: absolute;
+  bottom: 12px;
+  z-index: -1;
+}
+header {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 15px;
+  padding: 15px;
+}
+
+nav {
+  background: var(--color-container-text);
+  opacity: .7;
+  display: flex;
+  height: 50px;
+  justify-content: space-around;
+  width: 100%;
+  border-radius: 20px;
+ 
+  
+}
+nav a {
+  text-decoration: none;
+  position: relative;
+  color: var(--color-container-teste04);
+  top: 12px;
+  font-size: 20px;
+}
+nav a:hover {
+  color: var(--color-container-teste03);
+}""
+.container_title h1 {
+  display: flex;
+  justify-content: center;
+  margin: 24px;
+  padding: 24px;
+}
+
+.container_form {
+  background: var(--color-container-teste02);
+  text-align: center;
+  margin: 50px;
+  padding: 42px;
+  font-size: 24px;
+  opacity: .8;
+  border-radius: 10px;
+}
+.container_form h2 {
+  position: relative;
+  bottom: 30px;
+}
+
+.container_button {
+  display: flex;
+  justify-content: center;
+}
+
+#btnConf {
+  background: var(--color-container-colorButton);
+  width: 150px;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+#btnConf:hover {
+  background: var(--color-container-hover);
+}
+
+.render {
+  text-align: center;
+  background: var(--color-container-teste02);
+  margin: 45px;
+  padding: 8px;
+  font-size: 20px;
+  transition: 0.1s;
+  opacity: .8;
+  border-radius: 10px;
+}
+.render button {
+  background: var(--color-container-colorButton);
+  border: none;
+  width: 12rem;
+  padding: 5px;
+  margin: 12px;
+  border-radius: 4px;
+  transition: 0.1s;
+}
+.render button:hover {
+  background: var(--color-container-hover);
+}
+/*fim estilização da página de agendamento*/
+
+/*paletta de cores*/
+.colors {
+  --color-container-text: #0e0e0e;
+  --color-container-teste01: #454842;
+  --color-container-teste02: #656970;
+  --color-container-teste03: #bfbfbd;
+  --color-container-teste04: #f9f9f9;
+  --color-container-button: #6da9c080;
+  --color-container-colorButton: #38eef4;
+  --color-container-hover: #bef4f6c2;
+}

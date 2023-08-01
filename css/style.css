@@ -33,7 +33,9 @@ nav {
   background: var(--color-container-text);
   display: flex;
   height: 50px;
+  width: 100%;
   justify-content: space-around;
+  border-radius: 20px;
 }
 nav a {
   text-decoration: none;

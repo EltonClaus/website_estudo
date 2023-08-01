@@ -100,9 +100,16 @@ const agendamento = {
           especialista: especialista.value,
           plano: selected,
         });
-        alert("agendamento add");
+        alert("Agendamento Realizado");
       });
     });
   },
 };
 agendamento.init();
+
+const consultaAgendamento = {
+  start() {
+    console.log("teste se entrou na consulta");
+  },
+}
+consultaAgendamento.start();
