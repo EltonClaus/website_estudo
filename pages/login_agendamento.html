@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CM Saúde e Vida</title>
+    <link rel="stylesheet" href="../css/login.css">
+  </head>
+  <body class="colors">
+    <img src="../assets/consultar.jpeg" alt="">
+    <div class="container-login colors">
+      <div class="container-components colors">
+        <h1>Login</h1>
+        <label for="email">E-mail</label>
+        <input
+          type="text"
+          name="email"
+          id="email"
+          placeholder="Digite seu e-mail"
+        />
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" placeholder="********" />
+        <label for="remenber">Lembre-se de mim</label>
+        <input type="checkbox" name="remenber" id="remenber"/>
+        <a href="#">Esqueceu sua senha?</a><br />
+        <button id="btnLogin">Entrar</button>
+        <p>Não tem conta Conta?<a href="#"> Registre-se</a></p>
+      </div>
+    </div>
+    <div id="buttonDiv"></div>
+
+    <script>
+      function handleCredentialResponse(response) {
+        const data = jwt_decode(response.credential);
+        console.log(data);
+      }
+
+      window.onload = function () {
+        google.accounts.id.initialize({
+          client_id:
+            "152102380529-lnp9uv0qbr87n2j80ushtkghck2eqgvs.apps.googleusercontent.com",
+          callback: handleCredentialResponse,
+        });
+
+        google.accounts.id.renderButton(
+          document.getElementById("buttonDiv"),
+          {
+            theme: "filled_black",
+            size: "large",
+            type: "standard",
+            shape: "pill",
+            text: "signin_with",
+            logo_alignment: "left",
+          } // customization attributes
+        );
+
+        google.accounts.id.prompt(); // also display the One Tap dialog
+      };
+    </script>
+    <script src="https://accounts.google.com/gsi/client" async></script>
+    <script src="https://unpkg.com/jwt-decode/build/jwt-decode.js"></script>
+  </body>
+</html>

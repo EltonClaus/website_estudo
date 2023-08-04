@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body img{
+  display: flex;
+  opacity: .3;
+  width: 100%;
+  position: absolute;
+  bottom: 12px;
+  z-index: -1;
+}
+
+.container-login {
+  display: grid;
+
+  justify-items: end;
+  justify-content: center;
+  text-align: center;
+}
+.container-components {
+  display: grid;
+  justify-items: center;
+  margin: 35px;
+  padding: 12px;
+  width: 350px;
+  text-align: center;
+  flex-direction: row;
+  background: var(--color-container-teste05);
+  opacity: .8;
+  border-radius: 15px;
+}
+.container-components h1 {
+  margin: 50px;
+  padding: 5px;
+}
+
+.container-components input, label, a, p {
+  border: none;
+  margin: 4px;
+  padding: 4px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.container-components button {
+  background: var(--color-container-colorButton);
+  width: 210px;
+  padding: 5px;
+  margin: 15px;
+  border-radius: 4px;
+  border: none;
+  font-size: 18px;
+}
+.container-components button:hover {
+  background: var(--color-container-hover);
+  cursor: pointer;
+}
+#buttonDiv {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+  padding: 15px;
+ 
+
+}
+/*paletta de cores*/
+.colors {
+  --color-container-text: #0e0e0e;
+  --color-container-teste01: #454842;
+  --color-container-teste02: #656970;
+  --color-container-teste03: #bfbfbd;
+  --color-container-teste04: #f9f9f9;
+  --color-container-teste05: #5e80df;
+  --color-container-button: #6da9c080;
+  --color-container-colorButton: #38eef4;
+  --color-container-hover: #bef4f6c2;
+}
