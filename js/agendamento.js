@@ -15,17 +15,27 @@ import {
 
 const agendamento = {
   init() {
-    // this.firebase();
+
+          // Your web app's Firebase configuration
+          const firebaseConfig = {
+            apiKey: "AIzaSyDlm9jZIEWhUfw4qSKyO_NPfP35ouAuZbE",
+            authDomain: "websitestudy.firebaseapp.com",
+            projectId: "websitestudy",
+            storageBucket: "websitestudy.appspot.com",
+            messagingSenderId: "152102380529",
+            appId: "1:152102380529:web:84a05058be863808eb5a50",
+          };
+
     let nome = document.querySelector("#nome");
     let sobrenome = document.querySelector("#sobrenome");
     let email = document.querySelector("#email");
     let tel = document.querySelector("#tel");
     let date = document.querySelector("#date");
     let especialista = document.querySelector("#especialista");
-    this.populaTabela(nome, sobrenome, email, tel, date, especialista);
+    this.populaTabela(nome, sobrenome, email, tel, date, especialista, firebaseConfig);
   },
 
-  populaTabela(nome, sobrenome, email, tel, date, especialista) {
+  populaTabela(nome, sobrenome, email, tel, date, especialista, firebaseConfig) {
     let preview = document.querySelector(".container_preview");
     document.querySelector("#btnConf").addEventListener("click", () => {
       //Validate DateTime
@@ -72,15 +82,7 @@ const agendamento = {
         `;
       }
 
-      // Your web app's Firebase configuration
-      const firebaseConfig = {
-        apiKey: "AIzaSyDlm9jZIEWhUfw4qSKyO_NPfP35ouAuZbE",
-        authDomain: "websitestudy.firebaseapp.com",
-        projectId: "websitestudy",
-        storageBucket: "websitestudy.appspot.com",
-        messagingSenderId: "152102380529",
-        appId: "1:152102380529:web:84a05058be863808eb5a50",
-      };
+
 
       // Initialize Firebase
       const app = initializeApp(firebaseConfig);
@@ -106,10 +108,3 @@ const agendamento = {
   },
 };
 agendamento.init();
-
-const consultaAgendamento = {
-  start() {
-    console.log("teste se entrou na consulta");
-  },
-}
-consultaAgendamento.start();

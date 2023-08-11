@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body img{
+body #backImgLogin{
   display: flex;
   opacity: .3;
   width: 100%;

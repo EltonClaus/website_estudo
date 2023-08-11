@@ -7,12 +7,13 @@
 body {
   background: var(--color-container-teste03);
 }
-body img {
+body #backImg {
   display: flex;
   opacity: 0.4;
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 12px;
+  height: 100%;
 }
 header {
   display: flex;
@@ -110,6 +111,7 @@ nav a:hover {
   align-items: center;
   flex-direction: column;
   width: 100%;
+  height: 45%;
   padding: 50px;
   position: absolute;
   top: 47vw;
@@ -140,18 +142,16 @@ nav a:hover {
   left: 25rem;
   bottom: 15.2rem;
 }
-.footer_info .sociais {
-  background: var(--color-container-text);
-}
-.footer_info .sociais .insta {
+
+.footer_info .insta {
   position: relative;
   left: 55px;
-  top: 3rem;
+  top: -1vw;
 }
-.footer_info .sociais .face {
+.footer_info  .face {
   position: relative;
   right: 55px;
-  top: 2.5rem;
+  top: -4.8vw;
 }
 /*final footer do index*/
 
